@@ -45,7 +45,10 @@ const Kalkulator = () => {
           <button className="btn btn7" onClick={() => setState(state + "9")}>
             9
           </button>
-          <button className="btn btn8" onClick={() => setState(state + ")")}>
+          <button
+            className="btn btn8"
+            onClick={() => setSymbol(state + "x") || setState("")}
+          >
             <GrClose />
           </button>
           <button className="btn btn9" onClick={() => setState(state + "4")}>
@@ -59,7 +62,7 @@ const Kalkulator = () => {
           </button>
           <button
             className="btn btn12"
-            onClick={() => setSymbol(state + "/") && setState("")}
+            onClick={() => setSymbol(state + "/") || setState("")}
           >
             /
           </button>
@@ -72,7 +75,10 @@ const Kalkulator = () => {
           <button className="btn btn15" onClick={() => setState(state + "3")}>
             3
           </button>
-          <button className="btn btn16" onClick={() => setState(state + "+")}>
+          <button
+            className="btn btn16"
+            onClick={() => setSymbol(state + "+") || setState("")}
+          >
             +
           </button>
           <button className="btn btn17" onClick={() => setState(state + ",")}>
@@ -84,7 +90,10 @@ const Kalkulator = () => {
           <button className="btn btn19" onClick={() => setState(state + ")")}>
             =
           </button>
-          <button className="btn btn20" onClick={() => setState(state + "-")}>
+          <button
+            className="btn btn20"
+            onClick={() => setSymbol(state + "-") || setState("")}
+          >
             -
           </button>
         </div>
